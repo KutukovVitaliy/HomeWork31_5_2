@@ -8,10 +8,12 @@
 #include "IGraph.h"
 #include <vector>
 #include <ostream>
+#include <map>
 
 class ListGraph : public IGraph{
 private:
-    std::vector<std::vector<int>> *graph;
+    std::map<int, std::vector<int>> *graph;
+    int maxVertexNumber;
 public:
     ListGraph();
     ListGraph(const ListGraph& lg);
